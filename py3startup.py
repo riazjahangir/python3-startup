@@ -39,7 +39,6 @@ def reload(path='/Users/riaz', scope=None, updateinstances=True):
                     sys.modules[scope[c].__module__].__file__.startswith(path)}
     # Get distinct classes by qualified name
     classinfos = {'{0}.{1}'.format(ci.modulename, ci.classobj.__name__): ci for ci in myclasses.values()}
-    print(classinfos)
 
     # Get instances of my workspace classes
     def findinstances(iterable, visited=set()):
